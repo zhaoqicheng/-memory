@@ -1,0 +1,60 @@
+查看linux的版本以及内核信息：
+uname -a 
+cat /proc/version
+cat /etc/issue
+cat /etc/redhat-release
+lsb_release  -a
+
+ubuntu
+切换到root用户：sudo -i
+新建文件夹在 usr/local/download（文件夹专门用来存放下载的压缩包，安装文件等）穿的
+执行apt-get update  更新源，apt-get upgrade 更新已安装的包，apt-get install wget安装wget命令，apt-get install rpm安装rpm命令，apt-get install vim 安装vim命令。
+
+1.安装JDK8：
+下载JDK8的包
+a.wget http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-i586.tar.gz?AuthParam=1497235531_f5172beface3628cbeb9e6800dcae119
+解压命令
+tar -xzvf file.tar.gz
+
+selfExamination/selfExamination.html
+
+2.移动解压的包到usr/local/java中
+mv 命令
+
+3.配置环境变量
+vim /etc/profile
+I进入编辑模式
+写入：
+JAVA_HOME=/usr/local/java/jdk8
+PATH=$JAVA_HOME/bin:$PATH
+CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export JAVA_HOME
+export PATH
+export CLASSPATH
+Esc退出编辑模式，:wq保存退出
+重新加载配置文件生效
+source /etc/profile 
+测试： java -version
+
+4.安装tomcat
+wget http://mirror.bit.edu.cn/apache/tomcat/tomcat-8/v8.5.15/bin/apache-tomcat-8.5.15.tar.gz
+解压，移动文件
+启动tomcat： 进入tomcat/bin目录
+执行 ./start.sh
+查看启动日志：进入tomcat的logs目录
+tail -f cata。。。.out
+
+5.安装nginx
+
+
+CentOS:
+下载wget命令：sudo yum -y install wget
+同上
+
+使用xshell实现本地windows向远程服务器上传文件：
+下载包：
+yum install lrzsz  
+rz
+上传
+
+
