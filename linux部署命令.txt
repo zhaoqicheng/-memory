@@ -70,10 +70,10 @@ c、关闭密码登录
 d、新增ssh授权密钥存档文件
     touch .ssh/authorized_keys
 
-5、copy 授权密钥至authorized_keys文件中
+e、copy 授权密钥至authorized_keys文件中
 
-
-重启 service sshd restart
+   
+f、重启 service sshd restart
 
 
 
