@@ -1,4 +1,4 @@
-²é¿´linuxµÄ°æ±¾ÒÔ¼°ÄÚºËĞÅÏ¢£º
+æŸ¥çœ‹linuxçš„ç‰ˆæœ¬ä»¥åŠå†…æ ¸ä¿¡æ¯ï¼š
 uname -a 
 cat /proc/version
 cat /etc/issue
@@ -6,55 +6,75 @@ cat /etc/redhat-release
 lsb_release  -a
 
 ubuntu
-ÇĞ»»µ½rootÓÃ»§£ºsudo -i
-ĞÂ½¨ÎÄ¼ş¼ĞÔÚ usr/local/download£¨ÎÄ¼ş¼Ğ×¨ÃÅÓÃÀ´´æ·ÅÏÂÔØµÄÑ¹Ëõ°ü£¬°²×°ÎÄ¼şµÈ£©´©µÄ
-Ö´ĞĞapt-get update  ¸üĞÂÔ´£¬apt-get upgrade ¸üĞÂÒÑ°²×°µÄ°ü£¬apt-get install wget°²×°wgetÃüÁî£¬apt-get install rpm°²×°rpmÃüÁî£¬apt-get install vim °²×°vimÃüÁî¡£
+åˆ‡æ¢åˆ°rootç”¨æˆ·ï¼šsudo -i
+æ–°å»ºæ–‡ä»¶å¤¹åœ¨ usr/local/downloadï¼ˆæ–‡ä»¶å¤¹ä¸“é—¨ç”¨æ¥å­˜æ”¾ä¸‹è½½çš„å‹ç¼©åŒ…ï¼Œå®‰è£…æ–‡ä»¶ç­‰ï¼‰ç©¿çš„
+æ‰§è¡Œapt-get update  æ›´æ–°æºï¼Œapt-get upgrade æ›´æ–°å·²å®‰è£…çš„åŒ…ï¼Œapt-get install wgetå®‰è£…wgetå‘½ä»¤ï¼Œapt-get install rpmå®‰è£…rpmå‘½ä»¤ï¼Œapt-get install vim å®‰è£…vimå‘½ä»¤ã€‚
 
-1.°²×°JDK8£º
-ÏÂÔØJDK8µÄ°ü
+1.å®‰è£…JDK8ï¼š
+ä¸‹è½½JDK8çš„åŒ…
 a.wget http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-i586.tar.gz?AuthParam=1497235531_f5172beface3628cbeb9e6800dcae119
-½âÑ¹ÃüÁî
+è§£å‹å‘½ä»¤
 tar -xzvf file.tar.gz
 
 selfExamination/selfExamination.html
 
-2.ÒÆ¶¯½âÑ¹µÄ°üµ½usr/local/javaÖĞ
-mv ÃüÁî
+2.ç§»åŠ¨è§£å‹çš„åŒ…åˆ°usr/local/javaä¸­
+mv å‘½ä»¤
 
-3.ÅäÖÃ»·¾³±äÁ¿
+3.é…ç½®ç¯å¢ƒå˜é‡
 vim /etc/profile
-I½øÈë±à¼­Ä£Ê½
-Ğ´Èë£º
+Iè¿›å…¥ç¼–è¾‘æ¨¡å¼
+å†™å…¥ï¼š
 JAVA_HOME=/usr/local/java/jdk8
 PATH=$JAVA_HOME/bin:$PATH
 CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 export JAVA_HOME
 export PATH
 export CLASSPATH
-EscÍË³ö±à¼­Ä£Ê½£¬:wq±£´æÍË³ö
-ÖØĞÂ¼ÓÔØÅäÖÃÎÄ¼şÉúĞ§
+Escé€€å‡ºç¼–è¾‘æ¨¡å¼ï¼Œ:wqä¿å­˜é€€å‡º
+é‡æ–°åŠ è½½é…ç½®æ–‡ä»¶ç”Ÿæ•ˆ
 source /etc/profile 
-²âÊÔ£º java -version
+æµ‹è¯•ï¼š java -version
 
-4.°²×°tomcat
+4.å®‰è£…tomcat
 wget http://mirror.bit.edu.cn/apache/tomcat/tomcat-8/v8.5.15/bin/apache-tomcat-8.5.15.tar.gz
-½âÑ¹£¬ÒÆ¶¯ÎÄ¼ş
-Æô¶¯tomcat£º ½øÈëtomcat/binÄ¿Â¼
-Ö´ĞĞ ./start.sh
-²é¿´Æô¶¯ÈÕÖ¾£º½øÈëtomcatµÄlogsÄ¿Â¼
-tail -f cata¡£¡£¡£.out
+è§£å‹ï¼Œç§»åŠ¨æ–‡ä»¶
+å¯åŠ¨tomcatï¼š è¿›å…¥tomcat/binç›®å½•
+æ‰§è¡Œ ./start.sh
+æŸ¥çœ‹å¯åŠ¨æ—¥å¿—ï¼šè¿›å…¥tomcatçš„logsç›®å½•
+tail -f cataã€‚ã€‚ã€‚.out
 
-5.°²×°nginx
+5.å®‰è£…nginx
 
 
 CentOS:
-ÏÂÔØwgetÃüÁî£ºsudo yum -y install wget
-Í¬ÉÏ
+ä¸‹è½½wgetå‘½ä»¤ï¼šsudo yum -y install wget
+åŒä¸Š
 
-Ê¹ÓÃxshellÊµÏÖ±¾µØwindowsÏòÔ¶³Ì·şÎñÆ÷ÉÏ´«ÎÄ¼ş£º
-ÏÂÔØ°ü£º
+ä½¿ç”¨xshellå®ç°æœ¬åœ°windowså‘è¿œç¨‹æœåŠ¡å™¨ä¸Šä¼ æ–‡ä»¶ï¼š
+ä¸‹è½½åŒ…ï¼š
 yum install lrzsz  
 rz
-ÉÏ´«
+ä¸Šä¼ 
+
+6.linuxè®¾ç½®å…å¯†ç ç™»å½•
+aã€ç¼–è¾‘ sshd_config æ–‡ä»¶
+    # vi /etc/ssh/sshd_config
+
+bã€è®¾ç½®å¼€å¯ssh å¯†é’¥ç™»å½•
+    #RSAAuthentication no æ”¹æˆ RSAAuthentication yes
+
+cã€å…³é—­å¯†ç ç™»å½•
+    PasswordAuthentication yes æ”¹æˆ PasswordAuthentication no
+
+dã€æ–°å¢sshæˆæƒå¯†é’¥å­˜æ¡£æ–‡ä»¶
+    touch .ssh/authorized_keys
+
+5ã€copy æˆæƒå¯†é’¥è‡³authorized_keysæ–‡ä»¶ä¸­
+
+
+é‡å¯ service sshd restart
+
+
 
 
