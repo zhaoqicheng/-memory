@@ -75,6 +75,11 @@ e、copy 授权密钥至authorized_keys文件中
    
 f、重启 service sshd restart
 
+7.远程Debug
 
+java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=n    -jar /data/apps/service-center-member-1.0.jar --spring.profiles.active=dev
 
+ps ux|grep java
+
+kill -9 {id}
 
